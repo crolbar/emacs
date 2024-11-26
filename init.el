@@ -15,6 +15,9 @@
 ; line wrap off
 (setq-default truncate-lines t)
 
+; normal scrolling
+(setq scroll-step 1)
+(setq scroll-margin 5)
 
 
 ;  ___ ___ _  _ ___  ___ 
@@ -33,6 +36,11 @@
 
 
 
+;       _           
+;  _ __| |____ _ ___
+; | '_ \ / / _` (_-<
+; | .__/_\_\__, /__/
+; |_|      |___/    
 
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
@@ -62,4 +70,3 @@
 
 ; C-r for redo
 (evil-set-undo-system 'undo-redo)
-
