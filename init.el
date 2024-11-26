@@ -6,6 +6,12 @@
 
 (set-face-attribute 'default nil :font "Hack" :height 150)
 
+
+; line numbers
+(setq display-line-numbers-type 'relative)
+(global-display-line-numbers-mode t)
+(pixel-scroll-precision-mode t)
+
 ; line wrap off
 (setq-default truncate-lines t)
 
