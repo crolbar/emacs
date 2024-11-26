@@ -26,17 +26,34 @@
 
 
 
+
+
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+(package-initialize)
+
+
+
 (use-package magit :ensure t)
 
+;  _____   _____ _    
+; | __\ \ / /_ _| |   
+; | _| \ V / | || |__ 
+; |___| \_/ |___|____|
+;                     
+(setq-default evil-want-keybinding nil)
 
 (use-package evil :ensure t)
+(use-package evil-collection :ensure t :after evil)
 
 (evil-mode 8)
-
-; C-r for redo
-(evil-set-undo-system 'undo-redo)
+(evil-collection-init)
 
 ; C-u for half-screen up
 (with-eval-after-load 'evil
   (define-key evil-normal-state-map (kbd "C-u") 'evil-scroll-up)
   (define-key evil-visual-state-map (kbd "C-u") 'evil-scroll-up))
+
+; C-r for redo
+(evil-set-undo-system 'undo-redo)
+
