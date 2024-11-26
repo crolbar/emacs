@@ -3,10 +3,18 @@
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
 
+
 (set-face-attribute 'default nil :font "Hack" :height 150)
 
 ; line wrap off
 (setq-default truncate-lines t)
+
+
+
+;  ___ ___ _  _ ___  ___ 
+; | _ )_ _| \| |   \/ __|
+; | _ \| || .` | |) \__ \
+; |___/___|_|\_|___/|___/
 
 ; harpoon muscle memory
 (global-set-key (kbd "M-a") (lambda () (interactive) (find-file "~/.emacs.d/init.el")))
