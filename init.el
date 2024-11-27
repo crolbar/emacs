@@ -68,5 +68,12 @@
   (define-key evil-normal-state-map (kbd "C-u") 'evil-scroll-up)
   (define-key evil-visual-state-map (kbd "C-u") 'evil-scroll-up))
 
+
+; window movement
+(global-set-key (kbd "M-H") 'evil-window-left)
+(global-set-key (kbd "M-J") 'evil-window-down)
+(global-set-key (kbd "M-K") 'evil-window-up)
+(global-set-key (kbd "M-L") 'evil-window-right)
+
 ; C-r for redo
 (evil-set-undo-system 'undo-redo)
