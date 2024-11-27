@@ -65,8 +65,12 @@
 
 ; C-u for half-screen up
 (with-eval-after-load 'evil
-  (define-key evil-normal-state-map (kbd "C-u") 'evil-scroll-up)
-  (define-key evil-visual-state-map (kbd "C-u") 'evil-scroll-up))
+  (define-key evil-normal-state-map (kbd "C-u") 'evil-scroll-up))
+
+; "unbind" 'K' and 'J' in visual
+(with-eval-after-load 'evil
+  (define-key evil-visual-state-map (kbd "K") 'evil-previous-line)
+  (define-key evil-visual-state-map (kbd "J") 'evil-next-line))
 
 
 ; window movement
