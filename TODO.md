@@ -1,7 +1,7 @@
--	[ ] no tabs
--	[ ] formatters
--	[ ] lsp
--	[ ] cmp
--	[ ] harpoon alt
--	[ ] fuzzy finder ?
--	[ ] undo tree
+-   [x] no tabs
+-   [ ] formatters
+-   [ ] lsp
+-   [ ] cmp
+-   [ ] harpoon alt
+-   [ ] fuzzy finder ?
+-   [x] undo tree

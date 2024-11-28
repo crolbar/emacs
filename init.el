@@ -20,6 +20,10 @@
 (setq scroll-step 1)
 (setq scroll-margin 5)
 
+; normal tabs
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 4)
+
 
 ;  ___ ___ _  _ ___  ___ 
 ; | _ )_ _| \| |   \/ __|
@@ -46,6 +50,7 @@
 (use-package nix-mode :ensure t :mode "\\.nix\\'")
 (use-package web-mode :ensure t)
 (use-package go-mode :ensure t)
+(use-package rust-mode :ensure t)
 
 
 (use-package magit :ensure t)
@@ -56,6 +61,10 @@
 
 (use-package harpoon :ensure t)
 
+(use-package undo-tree :ensure t)
+(setq undo-tree-history-directory-alist `(("." . ,(concat user-emacs-directory "undo-tree"))))
+(setq undo-tree-visualizer-timestamps t)
+(global-undo-tree-mode)
 
 ;  _____   _____ _    
 ; | __\ \ / /_ _| |   

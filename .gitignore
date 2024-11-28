@@ -5,3 +5,4 @@ ido.last
 /eln-cache/
 transient/
 tree-sitter/
+.local/
