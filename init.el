@@ -3,9 +3,10 @@
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
 
-
 (set-face-attribute 'default nil :font "Hack" :height 150)
 
+; custom fil
+(setq custom-file "~/.emacs.d/emacs.custom.el")
 
 ; line numbers
 (setq display-line-numbers-type 'relative)
@@ -46,6 +47,11 @@
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
 
+
+; modes
+(use-package nix-mode :ensure t :mode "\\.nix\\'")
+(use-package web-mode :ensure t)
+(use-package go-mode :ensure t)
 
 
 (use-package magit :ensure t)
