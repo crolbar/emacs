@@ -65,9 +65,11 @@
 
 (use-package evil :ensure t)
 (use-package evil-collection :ensure t :after evil)
+(use-package evil-surround :ensure t :after evil)
 
 (evil-mode 8)
 (evil-collection-init)
+(global-evil-surround-mode 1)
 
 ; C-u for half-screen up
 (with-eval-after-load 'evil
