@@ -47,7 +47,6 @@
 (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
 (package-initialize)
 
-
 ; modes
 (use-package nix-mode :ensure t :mode "\\.nix\\'")
 (use-package web-mode :ensure t)
@@ -55,6 +54,10 @@
 
 
 (use-package magit :ensure t)
+
+(use-package diff-hl :ensure t)
+(global-diff-hl-mode)
+
 
 ;  _____   _____ _    
 ; | __\ \ / /_ _| |   
@@ -70,6 +73,11 @@
 (evil-mode 8)
 (evil-collection-init)
 (global-evil-surround-mode 1)
+
+; revert buffer bind
+
+(with-eval-after-load 'evil
+  (define-key evil-normal-state-map (kbd "M-r") 'revert-buffer))
 
 ; C-u for half-screen up
 (with-eval-after-load 'evil
