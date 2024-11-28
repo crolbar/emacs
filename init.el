@@ -26,11 +26,6 @@
 ; | _ \| || .` | |) \__ \
 ; |___/___|_|\_|___/|___/
 
-; harpoon muscle memory
-(global-set-key (kbd "M-a") (lambda () (interactive) (find-file "~/.emacs.d/init.el")))
-(global-set-key (kbd "M-o") (lambda () (interactive) (find-file "~/emacs-note.md")))
-(global-set-key (kbd "M-e") (lambda () (interactive) (switch-to-buffer "TUTORIAL")))
-
 ; rebind M-t because it looks usefull
 (global-set-key (kbd "M-y") 'transpose-words)
 
@@ -59,6 +54,9 @@
 (global-diff-hl-mode)
 
 
+(use-package harpoon :ensure t)
+
+
 ;  _____   _____ _    
 ; | __\ \ / /_ _| |   
 ; | _| \ V / | || |__ 
@@ -73,6 +71,7 @@
 (evil-mode 8)
 (evil-collection-init)
 (global-evil-surround-mode 1)
+(evil-set-leader nil (kbd "SPC"))
 
 ; revert buffer bind
 
@@ -97,3 +96,17 @@
 
 ; C-r for redo
 (evil-set-undo-system 'undo-redo)
+
+; harpoon
+(with-eval-after-load 'evil
+  (define-key evil-normal-state-map (kbd "SPC") 'evil-send-leader)
+  (define-key evil-normal-state-map (kbd "<leader> z") 'harpoon-toggle-file)
+  (define-key evil-normal-state-map (kbd "<leader> a") 'harpoon-add-file)
+  (define-key evil-normal-state-map (kbd "<leader> r") 'harpoon-delete-item)
+
+  (define-key evil-normal-state-map (kbd "M-a") 'harpoon-go-to-1)
+  (define-key evil-normal-state-map (kbd "M-o") 'harpoon-go-to-2)
+  (define-key evil-normal-state-map (kbd "M-e") 'harpoon-go-to-3)
+  (define-key evil-normal-state-map (kbd "M-u") 'harpoon-go-to-4)
+  (define-key evil-normal-state-map (kbd "M-i") 'harpoon-go-to-5)
+  (define-key evil-normal-state-map (kbd "M-d") 'harpoon-go-to-6))
