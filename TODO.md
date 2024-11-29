@@ -2,6 +2,5 @@
 -   [ ] formatters
 -   [ ] lsp
 -   [ ] cmp
--   [ ] harpoon alt
--   [ ] fuzzy finder ?
+-   [x] fuzzy finder ?
 -   [x] undo tree

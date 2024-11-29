@@ -6,3 +6,6 @@ ido.last
 transient/
 tree-sitter/
 .local/
+projects
+recentf
+tramp

@@ -66,6 +66,20 @@
 (setq undo-tree-visualizer-timestamps t)
 (global-undo-tree-mode)
 
+
+(use-package fzf :ensure t)
+(global-set-key
+ (kbd "C-x C-t")
+ (lambda ()
+   (interactive)
+   (if (vc-root-dir)
+       (fzf-git-files)
+     (fzf))))
+
+
+(use-package rg :ensure t)
+
+
 ;  _____   _____ _    
 ; | __\ \ / /_ _| |   
 ; | _| \ V / | || |__ 
