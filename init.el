@@ -101,6 +101,7 @@
 (evil-collection-init)
 (global-evil-surround-mode 1)
 (evil-set-leader nil (kbd "SPC"))
+(evil-set-undo-system 'undo-tree)
 
 ; revert buffer bind
 
@@ -122,9 +123,6 @@
 (global-set-key (kbd "M-J") 'evil-window-down)
 (global-set-key (kbd "M-K") 'evil-window-up)
 (global-set-key (kbd "M-L") 'evil-window-right)
-
-; C-r for redo
-(evil-set-undo-system 'undo-redo)
 
 ; harpoon
 (with-eval-after-load 'evil
