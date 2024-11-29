@@ -1,4 +1,10 @@
 (load-theme 'tsdh-dark t)
+(with-eval-after-load 'tsdh-dark-theme
+  (custom-theme-set-faces
+   'tsdh-dark
+   '(mode-line ((t (:background "gray15" ))))
+   '(minibuffer-prompt ((t (:foreground "peru" :weight bold))))))
+
 (tool-bar-mode -1)
 (menu-bar-mode -1)
 (scroll-bar-mode -1)
@@ -58,6 +64,9 @@
 (use-package diff-hl :ensure t)
 (diff-hl-flydiff-mode)
 (global-diff-hl-mode)
+
+; set fringe color back to background
+(set-face-background 'fringe "gray20")
 (add-hook 'dired-mode-hook 'diff-hl-dired-mode)
 
 (use-package dired-gitignore :ensure t)
