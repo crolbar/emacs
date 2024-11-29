@@ -85,6 +85,20 @@
 
 (use-package rg :ensure t)
 
+(use-package smex :ensure t)
+(use-package ido-completing-read+ :ensure t)
+
+(ido-mode 1)
+(ido-everywhere 1)
+(ido-ubiquitous-mode 1)
+
+
+(global-set-key (kbd "M-x") 'smex)
+
+;; swap these
+(global-set-key (kbd "C-x C-d") 'ido-dired)
+(global-set-key (kbd "C-x d") 'ido-list-directory)
+
 
 ;  _____   _____ _    
 ; | __\ \ / /_ _| |   
@@ -102,11 +116,6 @@
 (global-evil-surround-mode 1)
 (evil-set-leader nil (kbd "SPC"))
 (evil-set-undo-system 'undo-tree)
-
-; revert buffer bind
-
-(with-eval-after-load 'evil
-  (define-key evil-normal-state-map (kbd "M-r") 'revert-buffer))
 
 ; C-u for half-screen up
 (with-eval-after-load 'evil

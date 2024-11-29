@@ -4,3 +4,4 @@
 -   [ ] cmp
 -   [x] fuzzy finder ?
 -   [x] undo tree
+-   [ ] multicursor
