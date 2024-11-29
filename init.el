@@ -56,7 +56,13 @@
 (use-package magit :ensure t)
 
 (use-package diff-hl :ensure t)
+(diff-hl-flydiff-mode)
 (global-diff-hl-mode)
+(add-hook 'dired-mode-hook 'diff-hl-dired-mode)
+
+(use-package dired-gitignore :ensure t)
+(dired-gitignore-global-mode t)
+(global-set-key (kbd "C-x i") 'dired-gitignore-global-mode)
 
 
 (use-package harpoon :ensure t)
