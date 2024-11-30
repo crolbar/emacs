@@ -124,7 +124,6 @@
 (evil-mode 8)
 (evil-collection-init)
 (global-evil-surround-mode 1)
-(evil-set-leader nil (kbd "SPC"))
 (evil-set-undo-system 'undo-tree)
 
 ; C-u for half-screen up
@@ -145,10 +144,9 @@
 
 ; harpoon
 (with-eval-after-load 'evil
-  (define-key evil-normal-state-map (kbd "SPC") 'evil-send-leader)
-  (define-key evil-normal-state-map (kbd "<leader> z") 'harpoon-toggle-file)
-  (define-key evil-normal-state-map (kbd "<leader> a") 'harpoon-add-file)
-  (define-key evil-normal-state-map (kbd "<leader> r") 'harpoon-delete-item)
+  (define-key evil-normal-state-map (kbd "SPC z") 'harpoon-toggle-file)
+  (define-key evil-normal-state-map (kbd "SPC a") 'harpoon-add-file)
+  (define-key evil-normal-state-map (kbd "SPC r") 'harpoon-delete-item)
 
   (define-key evil-normal-state-map (kbd "M-a") 'harpoon-go-to-1)
   (define-key evil-normal-state-map (kbd "M-o") 'harpoon-go-to-2)
