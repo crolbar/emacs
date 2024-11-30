@@ -1,4 +1,5 @@
 (load-theme 'tsdh-dark t)
+(setq custom--inhibit-theme-enable nil)
 (with-eval-after-load 'tsdh-dark-theme
   (custom-theme-set-faces
    'tsdh-dark
