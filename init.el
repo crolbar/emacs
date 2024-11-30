@@ -57,7 +57,24 @@
 (use-package nix-mode :ensure t :mode "\\.nix\\'")
 (use-package web-mode :ensure t)
 (use-package go-mode :ensure t)
+(use-package lua-mode :ensure t)
+
 (use-package rust-mode :ensure t)
+; auto turn on lsp
+;; (add-hook 'rust-mode-hook 'eglot-ensure)
+(setq rust-mode-treesitter-derive t)
+
+(use-package ron-mode :ensure t)
+
+; lsp
+(use-package eglot :ensure t)
+
+; disable ref highligth & inlay hint
+(setq eglot-ignored-server-capabilites '(:documentHighlightProvider :inlayHintProvider))
+
+; make docs in echo area smaller
+(setq eldoc-echo-area-prefer-doc-buffer t)
+(setq eldoc-echo-area-use-multiline-p nil)
 
 
 (use-package magit :ensure t)
@@ -142,11 +159,20 @@
 (global-set-key (kbd "M-K") 'evil-window-up)
 (global-set-key (kbd "M-L") 'evil-window-right)
 
+
+; lsp binds
+(with-eval-after-load 'evil
+  (define-key evil-normal-state-map (kbd "SPC r n") 'eglot-rename)
+  (define-key evil-normal-state-map (kbd "[ d") 'flymake-goto-prev-error)
+  (define-key evil-normal-state-map (kbd "] d") 'flymake-goto-next-error)
+  (define-key evil-insert-state-map (kbd "C-h") 'eldoc)
+  (define-key evil-normal-state-map (kbd "SPC c a") 'eglot-code-actions))
+
+
 ; harpoon
 (with-eval-after-load 'evil
   (define-key evil-normal-state-map (kbd "SPC z") 'harpoon-toggle-file)
   (define-key evil-normal-state-map (kbd "SPC a") 'harpoon-add-file)
-  (define-key evil-normal-state-map (kbd "SPC r") 'harpoon-delete-item)
 
   (define-key evil-normal-state-map (kbd "M-a") 'harpoon-go-to-1)
   (define-key evil-normal-state-map (kbd "M-o") 'harpoon-go-to-2)

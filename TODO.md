@@ -1,7 +1,10 @@
 -   [x] no tabs
 -   [ ] formatters
--   [ ] lsp
+-   [x] lsp
 -   [ ] cmp
 -   [x] fuzzy finder ?
 -   [x] undo tree
 -   [ ] multicursor
+-   [ ] bind to iterate over ref resulst (rg, gr on some var for eg, ...)
+-   [ ] ibl alt
+-   [ ] treesj alt
