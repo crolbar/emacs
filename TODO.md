@@ -1,7 +1,7 @@
 -   [x] no tabs
 -   [ ] formatters
 -   [x] lsp
--   [ ] cmp
+-   [x] cmp
 -   [x] fuzzy finder ?
 -   [x] undo tree
 -   [ ] multicursor

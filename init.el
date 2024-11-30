@@ -78,6 +78,18 @@
 (setq eldoc-echo-area-prefer-doc-buffer t)
 (setq eldoc-echo-area-use-multiline-p nil)
 
+; cmp
+(use-package corfu :ensure t)
+(global-corfu-mode)
+(setq corfu-auto nil)
+(setq corfu-popupinfo-mode t)
+(setq corfu-popupinfo-delay 0.2)
+
+(use-package yasnippet :ensure t)
+; idk how to disable this crap so..
+(setq yas-keymap nil)
+(custom-set-faces '(yas-field-highlight-face ((t ()))))
+
 
 (use-package magit :ensure t)
 
@@ -170,6 +182,10 @@
   (define-key evil-insert-state-map (kbd "C-h") 'eldoc)
   (define-key evil-normal-state-map (kbd "SPC c a") 'eglot-code-actions))
 
+; cmp
+(with-eval-after-load 'evil
+  (define-key evil-insert-state-map (kbd "C-y") 'corfu-insert)
+  (define-key evil-insert-state-map (kbd "C-c") 'completion-at-point))
 
 ; harpoon
 (with-eval-after-load 'evil
