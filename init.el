@@ -40,6 +40,8 @@
 ; rebind M-t because it looks usefull
 (global-set-key (kbd "M-y") 'transpose-words)
 
+(global-set-key (kbd "C-x C-b") 'ido-switch-buffer)
+(global-set-key (kbd "C-x b") 'list-buffers)
 
 
 
