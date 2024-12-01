@@ -68,6 +68,12 @@
 
 (use-package ron-mode :ensure t)
 
+(setq-default c-basic-offset 4)
+(add-hook 'c-mode-hook
+          (lambda () (interactive)
+            (c-toggle-comment-style -1)))
+
+
 ; lsp
 (use-package eglot :ensure t)
 
