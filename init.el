@@ -146,6 +146,9 @@
 (global-set-key (kbd "C-x C-d") 'ido-dired)
 (global-set-key (kbd "C-x d") 'ido-list-directory)
 
+(use-package popwin :ensure t)
+(popwin-mode 1)
+
 
 ;  _____   _____ _    
 ; | __\ \ / /_ _| |   
