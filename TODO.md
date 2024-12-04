@@ -1,5 +1,5 @@
 -   [x] no tabs
--   [ ] formatters
+-   [x] formatters
 -   [x] lsp
 -   [x] cmp
 -   [x] fuzzy finder ?
@@ -8,3 +8,4 @@
 -   [ ] bind to iterate over ref resulst (rg, gr on some var for eg, ...)
 -   [ ] ibl alt
 -   [ ] treesj alt
+-   [ ] whichkey ?

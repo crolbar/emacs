@@ -60,6 +60,7 @@
 (use-package web-mode :ensure t)
 (use-package go-mode :ensure t)
 (use-package lua-mode :ensure t)
+(use-package php-mode :ensure t)
 
 (use-package rust-mode :ensure t)
 ; auto turn on lsp
@@ -95,6 +96,13 @@
 ; idk how to disable this crap so..
 (setq yas-keymap nil)
 (custom-set-faces '(yas-field-highlight-face ((t ()))))
+
+; fmt
+(setq-default clang-format-style "{BasedOnStyle: Mozilla, IndentWidth: 4}")
+
+(add-hook 'c-mode-hook
+          (lambda () (interactive)
+            (local-set-key (kbd "M-f") 'clang-format-buffer)))
 
 
 (use-package magit :ensure t)
@@ -181,6 +189,10 @@
 (global-set-key (kbd "M-J") 'evil-window-down)
 (global-set-key (kbd "M-K") 'evil-window-up)
 (global-set-key (kbd "M-L") 'evil-window-right)
+
+(with-eval-after-load 'evil
+  (define-key evil-normal-state-map (kbd "SPC w w") 'maximize-window)
+  (define-key evil-normal-state-map (kbd "C-x C-c") 'compile))
 
 
 ; lsp binds
