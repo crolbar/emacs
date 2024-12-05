@@ -104,6 +104,9 @@
           (lambda () (interactive)
             (local-set-key (kbd "M-f") 'clang-format-buffer)))
 
+(add-hook 'java-mode-hook
+          (lambda () (interactive)
+            (local-set-key (kbd "M-f") 'clang-format-buffer)))
 
 (use-package magit :ensure t)
 
