@@ -26,11 +26,16 @@
 ; normal scrolling
 (setq scroll-step 1)
 (setq scroll-margin 5)
+(setq hscroll-step 1)
+(setq auto-window-vscroll nil)
+(setq scroll-conservatively 101)
 
 ; normal tabs
 (setq-default indent-tabs-mode nil)
 (setq-default tab-width 4)
 
+
+(setq echo-keystrokes 0.3)
 
 ;  ___ ___ _  _ ___  ___ 
 ; | _ )_ _| \| |   \/ __|
