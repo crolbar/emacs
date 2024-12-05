@@ -14,6 +14,10 @@
 ;; font
 (set-face-attribute 'default nil :font "Hack" :height 150)
 
+(set-face-attribute 'font-lock-builtin-face nil :foreground "light coral")
+(set-face-attribute 'font-lock-regexp-grouping-backslash nil :foreground "dark turquoise")
+(set-face-attribute 'font-lock-number-face nil :foreground "dodger blue")
+
 ;; custom file
 (setq custom-file "~/.emacs.d/emacs.custom.el")
 
