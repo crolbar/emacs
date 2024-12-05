@@ -48,6 +48,8 @@
 (global-set-key (kbd "C-x C-b") 'ido-switch-buffer)
 (global-set-key (kbd "C-x b") 'list-buffers)
 
+(global-set-key (kbd "C-k") 'previous-error)
+(global-set-key (kbd "C-j") 'next-error)
 
 
 ;       _           
