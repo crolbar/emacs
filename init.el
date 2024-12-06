@@ -290,4 +290,5 @@
 
   ;; misc
   (define-key evil-normal-state-map (kbd "SPC w w") 'maximize-window)
-  (define-key evil-normal-state-map (kbd "C-x C-c") 'compile))
+  (define-key evil-normal-state-map (kbd "C-x C-c") 'compile)
+  (define-key evil-normal-state-map (kbd "C-x C-r") 'recompile))
