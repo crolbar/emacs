@@ -99,7 +99,7 @@
 ;;  / _|
 ;;  \__|
 
-;; (setq-default c-basic-offset 4)
+(setq-default c-basic-offset 4)
 (add-hook 'c-mode-hook
           (lambda () (interactive)
             (c-toggle-comment-style -1)))
