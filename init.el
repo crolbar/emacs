@@ -57,6 +57,7 @@
 (global-set-key (kbd "C-k") 'previous-error)
 (global-set-key (kbd "C-j") 'next-error)
 
+(global-set-key (kbd "C-s") nil)
 
 ;;;         _           
 ;;;    _ __| |____ _ ___
