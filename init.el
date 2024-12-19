@@ -12,6 +12,7 @@
 (scroll-bar-mode -1)
 
 ;; font
+(setq default-frame-alist '((font . "Hack")))
 (set-face-attribute 'default nil :font "Hack" :height 150)
 
 (set-face-attribute 'font-lock-builtin-face nil :foreground "light coral")
@@ -80,7 +81,11 @@
    lua-mode
    php-mode
    rust-mode
+   groovy-mode
+
+   ;; non programming
    ron-mode
+   markdown-mode
    )
  )
 

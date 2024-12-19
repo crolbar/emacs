@@ -9,3 +9,4 @@
 -   [ ] ibl alt
 -   [ ] treesj alt
 -   [ ] whichkey ?
+-   [ ] cursor pos
